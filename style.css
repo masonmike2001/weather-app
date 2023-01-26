@@ -1,0 +1,56 @@
+body {
+    font-family: 'Titillium Web', sans-serif;
+    color: gainsboro;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 2fr 1fr 4fr;
+}
+
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+#location {
+    font-size: 3rem;
+    margin-top: 0px;
+}
+
+#title, #daily-panel {
+    text-align: center;
+}
+
+#daily-panel {
+    display: grid;
+    border: gainsboro solid 1px;
+    border-radius: 12px;
+
+    grid-template-columns: repeat(7, 1fr);
+    margin: -20px auto 0 auto;
+    width: 80vw;
+    height: min-content;
+    min-width: 757px;
+    min-height: 142px;
+}
+
+.daily-panel-item {
+    border-right: gainsboro solid 1px;
+    height: max-content;
+
+}
+
+.daily-panel-item.last {
+    border: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 40px;
+}
