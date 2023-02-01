@@ -22,10 +22,10 @@
         </div>
         <img src="./assets/pencil-icon.svg" alt="edit">
         <form action="submit">
-            <input type="text" placeholder="Enter a location...">
-            <label for="fahrenheit">°F</label><input type="radio" name="degrees" id="fahrenheit">
-            <label for="celsius">°C</label><input type="radio" name="degrees" id="celsius">
-            <label for="kelvin">°K</label><input type="radio" name="degrees" id="kelvin">
+            <input type="text" placeholder="Enter a location..." id="location-input">
+            <label for="fahrenheit">°F</label><input type="radio" name="degrees" id="fahrenheit" value="F">
+            <label for="celsius">°C</label><input type="radio" name="degrees" id="celsius" value="C">
+            <label for="kelvin">°K</label><input type="radio" name="degrees" id="kelvin" value="K">
             <button>Submit</button>
         </form>
         <div id="daily-panel">
@@ -79,27 +79,55 @@
                 <h3 class="daily-panel-item-lo">47°</h3>  
             </div>
         </div>
-        <div id="hourly-panel">
-            <h1 id="hourly-panel-title">Hourly:</h1>
-            <div class="hourly-panel-item">
-                <h2 class="hourly-panel-item-time">8:00am</h2>
-                <h1 class="hourly-panel-item-temp">45°</h2>
+        <div id="bottom-panel">
+            <div id="info-panel">
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">Feels like</h2>
+                    <h1 class="hourly-panel-item-temp">55%</h2>
+                </div> 
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">Humidity</h2>
+                    <h1 class="hourly-panel-item-temp">55%</h2>
+                </div> 
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">Pressure</h2>
+                    <h1 class="hourly-panel-item-temp">55%</h2>
+                </div> 
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">Wind Speed</h2>
+                    <h1 class="hourly-panel-item-temp">55%</h2>
+                </div> 
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">Sunrise</h2>
+                    <h1 class="hourly-panel-item-temp">05:34</h2>
+                </div> 
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">Sunset</h2>
+                    <h1 class="hourly-panel-item-temp">17:55</h2>
+                </div> 
             </div>
-            <div class="hourly-panel-item">
-                <h2 class="hourly-panel-item-time">8:00am</h2>
-                <h1 class="hourly-panel-item-temp">45°</h2>
-            </div>
-            <div class="hourly-panel-item">
-                <h2 class="hourly-panel-item-time">8:00am</h2>
-                <h1 class="hourly-panel-item-temp">45°</h2>
-            </div>
-            <div class="hourly-panel-item">
-                <h2 class="hourly-panel-item-time">8:00am</h2>
-                <h1 class="hourly-panel-item-temp">45°</h2>
-            </div>
-            <div class="hourly-panel-item">
-                <h2 class="hourly-panel-item-time">8:00am</h2>
-                <h1 class="hourly-panel-item-temp">45°</h2>
+            <div id="hourly-panel">
+                <h1 id="hourly-panel-title">Hourly:</h1>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">8:00am</h2>
+                    <h1 class="hourly-panel-item-temp">45°</h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">8:00am</h2>
+                    <h1 class="hourly-panel-item-temp">45°</h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">8:00am</h2>
+                    <h1 class="hourly-panel-item-temp">45°</h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">8:00am</h2>
+                    <h1 class="hourly-panel-item-temp">45°</h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time">8:00am</h2>
+                    <h1 class="hourly-panel-item-temp">45°</h2>
+                </div>
             </div>
         </div>
     </main>
