@@ -38,12 +38,29 @@ form {
     margin: -80px auto;
 }
 
+#location-input {
+    padding: 7px;
+    border-radius: 3px;
+    width: 300px;
+}
+
+button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    background-color: rgb(255, 187, 99);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 #daily-panel {
     display: grid;
     border: gainsboro solid 1px;
     border-radius: 12px;
 
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     margin: -380px auto 0 auto;
     width: 80vw;
     height: min-content;
@@ -53,9 +70,7 @@ form {
 }
 
 .daily-panel-item {
-
     height: max-content;
-
 }
 
 .daily-panel-item:last-of-type {
@@ -89,16 +104,22 @@ form {
     width: 55%;
     border-radius: 30px;
     align-items: center;
-    justify-content: center;
-    height: 120%;
+    justify-content: left;
+    text-align: center;
+    height: 100%;
+    padding-top: 20px;
 }
 
 #hourly-panel-title {
     text-decoration: underline;
     margin-bottom: -30px;
-    margin-top: -40px;
+
 }
 
+.info-panel>h1 {
+    margin-top: -20px;
+    font-size: 2.7rem;
+}
 .hourly-panel-item {
     display: flex;
     flex-direction: row;
@@ -106,7 +127,6 @@ form {
     align-items: center;
     gap: 50px;
     margin-bottom: -60px;
-
 }
 
 .hourly-panel-item-time {
