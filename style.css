@@ -67,7 +67,6 @@ button:hover {
     border: white solid 1px;
     color: white;
     border-radius: 12px;
-
     grid-template-columns: repeat(5, 1fr);
     margin: -380px auto 0 auto;
     width: 80vw;
@@ -123,7 +122,6 @@ button:hover {
 #hourly-panel-title {
     text-decoration: underline;
     margin-bottom: -30px;
-
 }
 
 .info-panel>h1 {
