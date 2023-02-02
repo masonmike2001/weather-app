@@ -1,7 +1,9 @@
 body {
     font-family: 'Titillium Web', sans-serif;
-    color: gainsboro;
+    color: rgb(255, 255, 255);
+    mix-blend-mode: difference;
     scroll-behavior: smooth;
+    margin: 0;
 }
 
 main {
@@ -29,13 +31,18 @@ img {
     margin: -40px auto 0 auto;
 }
 
-#title, #daily-panel, #hourly-panel {
+#title, #daily-panel, #hourly-panel, form, footer {
     text-align: center;
-    filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+    background-color: rgba(0, 0, 0, 0.224);
+    
 }
 
 form {
-    margin: -80px auto;
+    margin: -99px auto 10px;
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+    border-bottom: white solid 1px;
 }
 
 #location-input {
@@ -57,7 +64,8 @@ button:hover {
 
 #daily-panel {
     display: grid;
-    border: gainsboro solid 1px;
+    border: white solid 1px;
+    color: white;
     border-radius: 12px;
 
     grid-template-columns: repeat(5, 1fr);
@@ -66,11 +74,12 @@ button:hover {
     height: min-content;
     min-width: 757px;
     min-height: 142px;
-    background-color: rgba(0, 0, 0, 0.224);
+    background-color: rgba(0, 0, 0, 0.267);
 }
 
 .daily-panel-item {
     height: max-content;
+    text-align: center;
 }
 
 .daily-panel-item:last-of-type {
@@ -98,9 +107,10 @@ button:hover {
 #hourly-panel, #info-panel {
     display: flex;
     flex-direction: column;
-    margin: 20px auto 0 auto;
-    background-color: rgba(0, 0, 0, 0.224);
+    margin: 20px auto 40px auto;
+    background-color: rgba(0, 0, 0, 0.267);
     border: white solid 1px;
+    color: white;
     width: 55%;
     border-radius: 30px;
     align-items: center;
@@ -136,4 +146,10 @@ button:hover {
 
 footer {
     text-align: center;
+    width: 20%;
+    height: 10%;
+    margin: 10px auto ;
+    border-radius: 25px;
+    color: white;
+    border: white solid 1px;
 }

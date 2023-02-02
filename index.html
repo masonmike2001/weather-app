@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Weather App</title>
+    <title>MRAM Weather</title>
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,12 +13,12 @@
   </head>
   <body>
     <main>
-        <video autoplay muted loop id="myVideo">
-            <source src="./assets/rain.mp4" type="video/mp4">
+        <video autoplay muted id="myVideo">
+            <source src="" type="video/mp4">
           </video>
         <div id="title">
             <h2>How's the weather in...</h1>
-            <h1 id="location">New York City?</h1>
+            <h1 id="location"></h1>
         </div>
         <img src="./assets/pencil-icon.svg" alt="edit">
         <form action="submit">
@@ -30,90 +30,110 @@
         </form>
         <div id="daily-panel">
             <div class="daily-panel-item">
-                <h3 class="daily-panel-item-date">Today</h3>
-                <h1 class="daily-panel-item-weather">Clear</h1>
-                <h1 class="daily-panel-item-temp">45°</h1>
-                <h3 class="daily-panel-item-hi">46°</h3>
-                <h3 class="daily-panel-item-lo">47°</h3>   
+                <h3 class="daily-panel-item-date"></h3>
+                <h1 class="daily-panel-item-weather"></h1>
+                <h1 class="daily-panel-item-temp"></h1>
+                <h3 class="daily-panel-item-hi"></h3>
+                <h3 class="daily-panel-item-lo"></h3>   
             </div>
             <div class="daily-panel-item">
-                <h3 class="daily-panel-item-date">Today</h3>
-                <h1 class="daily-panel-item-weather">Clear</h1>
-                <h1 class="daily-panel-item-temp">45°</h1>
-                <h3 class="daily-panel-item-hi">46°</h3>
-                <h3 class="daily-panel-item-lo">47°</h3>  
+                <h3 class="daily-panel-item-date"></h3>
+                <h1 class="daily-panel-item-weather"></h1>
+                <h1 class="daily-panel-item-temp"></h1>
+                <h3 class="daily-panel-item-hi"></h3>
+                <h3 class="daily-panel-item-lo"></h3>  
             </div>
             <div class="daily-panel-item">
-                <h3 class="daily-panel-item-date">Today</h3>
-                <h1 class="daily-panel-item-weather">Clear</h1>
-                <h1 class="daily-panel-item-temp">45°</h1>
-                <h3 class="daily-panel-item-hi">46°</h3>
-                <h3 class="daily-panel-item-lo">47°</h3>  
+                <h3 class="daily-panel-item-date"></h3>
+                <h1 class="daily-panel-item-weather"></h1>
+                <h1 class="daily-panel-item-temp"></h1>
+                <h3 class="daily-panel-item-hi"></h3>
+                <h3 class="daily-panel-item-lo"></h3>  
             </div>
             <div class="daily-panel-item">
-                <h3 class="daily-panel-item-date">Today</h3>
-                <h1 class="daily-panel-item-weather">Clear</h1>
-                <h1 class="daily-panel-item-temp">45°</h1>
-                <h3 class="daily-panel-item-hi">46°</h3>
-                <h3 class="daily-panel-item-lo">47°</h3>  
+                <h3 class="daily-panel-item-date"></h3>
+                <h1 class="daily-panel-item-weather"></h1>
+                <h1 class="daily-panel-item-temp"></h1>
+                <h3 class="daily-panel-item-hi"></h3>
+                <h3 class="daily-panel-item-lo"></h3>  
             </div>
 
             <div class="daily-panel-item last">
-                <h3 class="daily-panel-item-date">Today</h3>
-                <h1 class="daily-panel-item-weather">Clear</h1>
-                <h1 class="daily-panel-item-temp">45°</h1>
-                <h3 class="daily-panel-item-hi">46°</h3>
-                <h3 class="daily-panel-item-lo">47°</h3>  
+                <h3 class="daily-panel-item-date"></h3>
+                <h1 class="daily-panel-item-weather"></h1>
+                <h1 class="daily-panel-item-temp"></h1>
+                <h3 class="daily-panel-item-hi"></h3>
+                <h3 class="daily-panel-item-lo"></h3>  
             </div>
         </div>
         <div id="bottom-panel">
             <div id="info-panel">
                 <div class="info-panel">
                     <h2 id="feels-like-title">Feels like</h2>
-                    <h1 id="feels-like-value">55%</h1>
+                    <h1 id="feels-like-value"></h1>
                 </div> 
                 <div class="info-panel">
                     <h2 id="humidity-title">Humidity</h2>
-                    <h1 id="humidity-value">55%</h1>
+                    <h1 id="humidity-value"></h1>
                 </div> 
                 <div class="info-panel">
                     <h2 id="pressure-title">Pressure</h2>
-                    <h1 id="pressure-value">55%</h1>
+                    <h1 id="pressure-value"></h1>
                 </div> 
                 <div class="info-panel">
                     <h2 id="wind-title">Wind Speed</h2>
-                    <h1 id="wind-value">55%</h1>
+                    <h1 id="wind-value"></h1>
                 </div> 
                 <div class="info-panel">
                     <h2 id="sunrise-title">Sunrise</h2>
-                    <h1 id="sunrise-value">05:34</h1>
+                    <h1 id="sunrise-value"></h1>
                 </div> 
                 <div class="info-panel">
                     <h2 id="sunset-title">Sunset</h2>
-                    <h1 id="sunset-value">17:55</h1>
+                    <h1 id="sunset-value"></h1>
                 </div> 
             </div>
             <div id="hourly-panel">
                 <h1 id="hourly-panel-title">Hourly:</h1>
                 <div class="hourly-panel-item">
-                    <h2 class="hourly-panel-item-time">8:00am</h2>
-                    <h1 class="hourly-panel-item-temp">45°</h2>
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
                 </div>
                 <div class="hourly-panel-item">
-                    <h2 class="hourly-panel-item-time">8:00am</h2>
-                    <h1 class="hourly-panel-item-temp">45°</h2>
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
                 </div>
                 <div class="hourly-panel-item">
-                    <h2 class="hourly-panel-item-time">8:00am</h2>
-                    <h1 class="hourly-panel-item-temp">45°</h2>
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
                 </div>
                 <div class="hourly-panel-item">
-                    <h2 class="hourly-panel-item-time">8:00am</h2>
-                    <h1 class="hourly-panel-item-temp">45°</h2>
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
                 </div>
                 <div class="hourly-panel-item">
-                    <h2 class="hourly-panel-item-time">8:00am</h2>
-                    <h1 class="hourly-panel-item-temp">45°</h2>
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
+                </div>
+                <div class="hourly-panel-item">
+                    <h2 class="hourly-panel-item-time"></h2>
+                    <h1 class="hourly-panel-item-temp"></h2>
                 </div>
             </div>
         </div>

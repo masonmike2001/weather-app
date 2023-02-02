@@ -1,12 +1,12 @@
 // include a live background that changes depending on the weather
 let tempUnit = 'F';
-fetchData('London');
 setDates();
+fetchData('02556');
 const submit = document.querySelector('button');
 submit.addEventListener('click', function(e) {
     e.preventDefault();
-    const location = document.getElementById('location-input').value;
     tempUnit = document.querySelector('input[name="degrees"]:checked').value;
+    const location = document.querySelector('input').value;
     fetchData(location);
 });
 
@@ -19,13 +19,15 @@ function fetchData (location) {
             return response.json();
         })
         .then(function(response) {
-            // console.log(response);
+            console.log(location);
             data.feelsLike = convertTemp(response['main']['feels_like']);
             data.humidity = response['main']['humidity'] + '%';
             data.pressure = response['main']['pressure'] + ' hpa';
             data.windSpeed = response['wind']['speed'] + ' m/s';
-            data.sunRise = response['sys']['sunrise'];
-            data.sunSet = response['sys']['sunset'];
+            data.sunRise = new Date(response['sys']['sunrise']*1000);
+            data.sunSet =  new Date(response['sys']['sunset']*1000);
+            document.querySelector('#location').textContent = response['name'] + '?';
+            console.log(response);
             console.log(data);
         })
         .catch((error) => {
@@ -59,7 +61,6 @@ function fetchData (location) {
             {
                 if (response['list'][i]['dt_txt'].slice(0, 10) != date)
                 {
-                    console.log("Successful day end: " + date);
                     data.dailyTemp[day] = convertTemp(tempSum / itemsPerDay);
                     data.dailyLow[day] = convertTemp(minTemp);
                     data.dailyHigh[day] = convertTemp(maxTemp);
@@ -79,13 +80,13 @@ function fetchData (location) {
                 weather[itemsPerDay] = response['list'][i]['weather'][0]['main'];
                 itemsPerDay++;
                 tempSum += response['list'][i]['main']['temp'];
+                updateDOM(data);
+                changeBackground(data);
             }
-            console.log(data);
         })
         .catch((error) => {
             console.error('Error: Unable to fetch weather forecast.', error);
         });
-        updateDOM(data);
 }
 
 function setDates() {
@@ -108,13 +109,59 @@ function setDates() {
 function convertTemp (value) {
     if (tempUnit === 'F') return Math.round(((((value - 273.15) * 9) / 5) + 32)) + '°F';
     else if (tempUnit === 'C') return Math.round((value - 273.15)) + '°C';
-    else return value + '°K';
+    else return Math.round(value) + '°K';
 }
 
-function updateDOM(dataObject) {
-    
+function updateDOM(data) {
+    // daily
+    const weatherDOM = document.querySelectorAll('.daily-panel-item-weather');
+    const tempDOM = document.querySelectorAll('.daily-panel-item-temp');
+    const hiDOM = document.querySelectorAll('.daily-panel-item-hi');
+    const loDOM = document.querySelectorAll('.daily-panel-item-lo');
+    for (let i = 0; i < 5; i++)
+    {
+        weatherDOM[i].textContent = data.dailyWeather[i];
+        tempDOM[i].textContent = data.dailyTemp[i];
+        hiDOM[i].textContent = data.dailyHigh[i];
+        loDOM[i].textContent = data.dailyLow[i];
+    }
+
+    // hourly
+    const hTime = document.querySelectorAll('.hourly-panel-item-time');
+    const hTemp = document.querySelectorAll('.hourly-panel-item-temp');
+
+    for (let j = 0; j < 10; j++)
+    {
+        hTime[j].textContent = data.hourlyTime[j];
+        hTemp[j].textContent = data.hourlyTemp[j];
+    }
+
+    // info
+    document.querySelector('#feels-like-value').textContent = data.feelsLike;
+    document.querySelector('#humidity-value').textContent = data.humidity;
+    document.querySelector('#pressure-value').textContent = data.pressure;
+    document.querySelector('#wind-value').textContent = data.windSpeed;
+    document.querySelector('#sunrise-value').textContent = data.sunRise;
+    document.querySelector('#sunset-value').textContent = data.sunSet;
+    document.querySelector('#sunrise-value').textContent = (document.querySelector('#sunrise-value').textContent).substring(16, 25);
+    document.querySelector('#sunset-value').textContent = (document.querySelector('#sunset-value').textContent).substring(16, 25);
 }
 
+function changeBackground(data) {
+    console.log(data.dailyWeather[0]);
+    if (data.dailyWeather[0] === 'Clear') {
+        (document.querySelector('source')).setAttribute('src', './assets/clear.mp4');
+    }
+    else if (data.dailyWeather[0] === 'Clouds')
+    {
+        (document.querySelector('source')).setAttribute('src', './assets/cloudy.mp4');
+    }   
+    else if (data.dailyWeather[0] === 'Rain')
+    {
+        (document.querySelector('source')).setAttribute('src', './assets/rain.mp4');
+    }
+    document.querySelector('#myVideo').load();
+}
 function Data(dailyTemp, dailyWeather, dailyHigh, dailyLow, hourlyTime, hourlyTemp, feelsLike, humidity, pressure, windSpeed, sunRise, sunSet) {
     this.dailyTemp = dailyTemp
     this.dailyWeather = dailyWeather
