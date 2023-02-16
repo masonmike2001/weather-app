@@ -16,18 +16,20 @@
         <video autoplay muted id="myVideo">
             <source src="" type="video/mp4">
           </video>
-        <div id="title">
-            <h2>How's the weather in...</h1>
-            <h1 id="location"></h1>
+        <div class="top-head">
+            <div id="title">
+                <h2>How's the weather in...</h1>
+                <h1 id="location"></h1>
+            </div>
+
+            <form action="submit">
+                <input type="text" placeholder="Enter a location..." id="location-input">
+                <label for="fahrenheit">°F</label><input type="radio" name="degrees" id="fahrenheit" value="F">
+                <label for="celsius">°C</label><input type="radio" name="degrees" id="celsius" value="C">
+                <label for="kelvin">°K</label><input type="radio" name="degrees" id="kelvin" value="K">
+                <button>Submit</button>
+            </form>
         </div>
-        <img src="./assets/pencil-icon.svg" alt="edit">
-        <form action="submit">
-            <input type="text" placeholder="Enter a location..." id="location-input">
-            <label for="fahrenheit">°F</label><input type="radio" name="degrees" id="fahrenheit" value="F">
-            <label for="celsius">°C</label><input type="radio" name="degrees" id="celsius" value="C">
-            <label for="kelvin">°K</label><input type="radio" name="degrees" id="kelvin" value="K">
-            <button>Submit</button>
-        </form>
         <div id="daily-panel">
             <div class="daily-panel-item">
                 <h3 class="daily-panel-item-date"></h3>

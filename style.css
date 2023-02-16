@@ -4,6 +4,8 @@ body {
     mix-blend-mode: difference;
     scroll-behavior: smooth;
     margin: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 main {
@@ -31,18 +33,21 @@ img {
     margin: -40px auto 0 auto;
 }
 
-#title, #daily-panel, #hourly-panel, form, footer {
+.top-head {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.224);
-    
+    height: min-content;
+    border-bottom: white solid 1px;
 }
 
 form {
-    margin: -99px auto 10px;
-    width: 100%;
+    margin: -20px auto 0;
     height: fit-content;
     padding-bottom: 20px;
-    border-bottom: white solid 1px;
 }
 
 #location-input {
@@ -52,9 +57,10 @@ form {
 }
 
 button {
-    width: 200px;
+    width: 20%;
     height: 40px;
     border: none;
+    margin-top: 20px;
     background-color: rgb(255, 187, 99);
     border-radius: 5px;
 }
@@ -70,7 +76,7 @@ button:hover {
     color: white;
     border-radius: 12px;
     grid-template-columns: repeat(5, 1fr);
-    margin: -380px auto 0 auto;
+    margin: -180px auto 0 auto;
     width: 80vw;
     height: min-content;
     min-width: 757px;
@@ -112,7 +118,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.267);
     border: white solid 1px;
     color: white;
-    width: 55%;
+    width: 45%;
     border-radius: 30px;
     align-items: center;
     justify-content: left;
@@ -146,11 +152,12 @@ button:hover {
 
 footer {
     text-align: center;
+    margin: auto;
     width: 98%;
     height: 10%;
-    margin: 10px auto ;
     border-radius: 25px;
     color: white;
-    border: white solid 1px;
+
     margin-top: 50px;
+    padding-bottom: 30px;
 }
