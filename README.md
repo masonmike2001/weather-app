@@ -1,6 +1,6 @@
 # Weather App
 
-A weather webapp that utilizes the OpenWeatherMap API to display the current weather and forecast for any city in the world. Includes current meteorological data for the location.
+A weather webapp that utilizes the OpenWeatherMap API to display the current weather and forecast for any major city in the world. Includes current meteorological data for the location.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ There is already a placeholder location included for the site to refer to. In or
 - Live Backgrounds for Local Weather
 
 ## Usage
-- Enter location name (less precise), or ZIP (more precise)
+- Enter city name, country name, or ZIP. Accepts city names with more than one word.
 - Remember to select the unit of temperature (Fahrenheit, Celsius, or Kelvin), and click the *submit* button
 
 ## Deployment
