@@ -56,10 +56,12 @@ button {
     height: 40px;
     border: none;
     background-color: rgb(255, 187, 99);
+    border-radius: 5px;
 }
 
 button:hover {
     cursor: pointer;
+    background-color: rgb(255, 176, 72);
 }
 
 #daily-panel {
@@ -144,10 +146,11 @@ button:hover {
 
 footer {
     text-align: center;
-    width: 20%;
+    width: 98%;
     height: 10%;
     margin: 10px auto ;
     border-radius: 25px;
     color: white;
     border: white solid 1px;
+    margin-top: 50px;
 }

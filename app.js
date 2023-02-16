@@ -1,11 +1,11 @@
 let tempUnit = 'F';
 setDates();
-fetchData('02556');
+fetchData('Boston');
 const submit = document.querySelector('button');
 submit.addEventListener('click', function(e) {
   e.preventDefault();
   tempUnit = document.querySelector('input[name="degrees"]:checked').value;
-  const location = document.querySelector('input').value;
+  const location = (document.querySelector('input').value).replace(' ', '+');
   fetchData(location);
 });
 
