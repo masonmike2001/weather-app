@@ -153,11 +153,15 @@ button:hover {
 footer {
     text-align: center;
     margin: auto;
-    width: 98%;
-    height: 10%;
+    width: 20%;
+    height: 5%;
     border-radius: 25px;
     color: white;
-
-    margin-top: 50px;
-    padding-bottom: 30px;
+    background-color: black;
+    margin-top: -5%;
+    padding-bottom: 80px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.224);
+    border: white solid 1px;
+    border-radius: 5px;
 }
